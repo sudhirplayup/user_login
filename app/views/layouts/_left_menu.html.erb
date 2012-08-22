@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>UserLogin</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<div id="user_nav">
+  <% if current_user %>
+    Logged in as <%= current_user.email %>.
+    <%= link_to "Log out", log_out_path %>
+  <% else %>
+    <%= link_to "Sign up", sign_up_path %> or
+    <%= link_to "log in", log_in_path %>
+  <% end %>
+</div>
+
+<% flash.each do |name, msg| %>
+  <%= content_tag :div, msg, :id => "flash_#{name}" %>
+<% end %>
+
+<div id="art-main">
+    <div class="art-sheet">
+        <div class="art-sheet-tl"></div>
+        <div class="art-sheet-tr"></div>
+        <div class="art-sheet-bl"></div>
+        <div class="art-sheet-br"></div>
+        <div class="art-sheet-tc"></div>
+        <div class="art-sheet-bc"></div>
+        <div class="art-sheet-cl"></div>
+        <div class="art-sheet-cr"></div>
+        <div class="art-sheet-cc"></div>
+        <div class="art-sheet-body">
+            <div class="art-header">
+                <div class="art-header-clip">
+                    <div class="art-header-png"></div>
+                    <div class="art-header-jpeg"></div>
+                </div>
+                <div class="art-headerobject"></div>
+                <div class="art-logo">
+                  <img src="assets/logo.png" width="30%" alt="an image" style="float:left" />
+                                 <h1 class="art-logo-name"><a href="./index.html">Enter Site Title</a></h1>
+                                                 <h2 class="art-logo-text">Enter Site Slogan</h2>
+                                </div>
+            </div>
+            <div class="cleared reset-box"></div>
+<div class="art-nav">
+  <div class="art-nav-l"></div>
+  <div class="art-nav-r"></div>
+<div class="art-nav-outer">
+  <ul class="art-hmenu">
+    <li>
+      <a href="./new-page.html" class="active"><span class="l"></span><span class="r"></span><span class="t">New Page</span></a>
+    </li> 
+    <li>
+      <a href="./new-page-2.html"><span class="l"></span><span class="r"></span><span class="t">New Page 2</span></a>
+    </li> 
+  </ul>
+</div>
+</div>
+<div class="cleared reset-box"></div>
+
+<%= yield %>
+
+
+                      <div class="cleared"></div>
+                    </div>
+                    <div class="art-layout-cell art-sidebar1">
+<div class="art-vmenublock">
+    <div class="art-vmenublock-tl"></div>
+    <div class="art-vmenublock-tr"></div>
+    <div class="art-vmenublock-bl"></div>
+    <div class="art-vmenublock-br"></div>
+    <div class="art-vmenublock-tc"></div>
+    <div class="art-vmenublock-bc"></div>
+    <div class="art-vmenublock-cl"></div>
+    <div class="art-vmenublock-cr"></div>
+    <div class="art-vmenublock-cc"></div>
+    <div class="art-vmenublock-body">
+                <div class="art-vmenublockheader">
+                    <h3 class="t">Vertical Menu</h3>
+                </div>
+                <div class="art-vmenublockcontent">
+                    <div class="art-vmenublockcontent-tl"></div>
+                    <div class="art-vmenublockcontent-tr"></div>
+                    <div class="art-vmenublockcontent-bl"></div>
+                    <div class="art-vmenublockcontent-br"></div>
+                    <div class="art-vmenublockcontent-tc"></div>
+                    <div class="art-vmenublockcontent-bc"></div>
+                    <div class="art-vmenublockcontent-cl"></div>
+                    <div class="art-vmenublockcontent-cr"></div>
+                    <div class="art-vmenublockcontent-cc"></div>
+                    <div class="art-vmenublockcontent-body">
+                <ul class="art-vmenu">
+  <li>
+    <a href="./new-page.html" class="active"><span class="l"></span><span class="r"></span><span class="t">New Page</span></a>
+  </li> 
+  <li>
+    <a href="./new-page-2.html"><span class="l"></span><span class="r"></span><span class="t">New Page 2</span></a>
+  </li> 
+</ul>
+                
+                                    <div class="cleared"></div>
+                    </div>
+                </div>
+    <div class="cleared"></div>
+    </div>
+</div>
+<div class="art-block">
+    <div class="art-block-tl"></div>
+    <div class="art-block-tr"></div>
+    <div class="art-block-bl"></div>
+    <div class="art-block-br"></div>
+    <div class="art-block-tc"></div>
+    <div class="art-block-bc"></div>
+    <div class="art-block-cl"></div>
+    <div class="art-block-cr"></div>
+    <div class="art-block-cc"></div>
+    <div class="art-block-body">
+                <div class="art-blockheader">
+                    <h3 class="t">New Block</h3>
+                </div>
+                <div class="art-blockcontent">
+                    <div class="art-blockcontent-tl"></div>
+                    <div class="art-blockcontent-tr"></div>
+                    <div class="art-blockcontent-bl"></div>
+                    <div class="art-blockcontent-br"></div>
+                    <div class="art-blockcontent-tc"></div>
+                    <div class="art-blockcontent-bc"></div>
+                    <div class="art-blockcontent-cl"></div>
+                    <div class="art-blockcontent-cr"></div>
+                    <div class="art-blockcontent-cc"></div>
+                    <div class="art-blockcontent-body">
+                <p>Enter Block content here...</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam pharetra, tellus sit amet congue vulputate, nisi erat iaculis nibh, vitae feugiat sapien ante eget mauris. </p>                
+                                    <div class="cleared"></div>
+                    </div>
+                </div>
+    <div class="cleared"></div>
+    </div>
+</div>
+
+                      <div class="cleared"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="cleared"></div>
+            
+        <div class="cleared"></div>
+        </div>
+    </div>
+    <div class="art-footer">
+        <div class="art-footer-t"></div>
+        <div class="art-footer-b"></div>
+        <div class="art-footer-body">
+            <div class="art-footer-center">
+                <div class="art-footer-wrapper">
+                    <div class="art-footer-text">
+                        <a href="#" class="art-rss-tag-icon" title="RSS"></a>
+                        <p><a href="#">Link1</a> | <a href="#">Link2</a> | <a href="#">Link3</a></p><p>Copyright © 2011. All Rights Reserved.</p>
+                        <div class="cleared"></div>
+                       <p class="art-page-footer"><a href="http://www.2createawebsite.com/artisteer">Website Template created with Artisteer</a>.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="cleared"></div>
+        </div>
+    </div>
+</div>
+
+
+
+</body>
+</html>
